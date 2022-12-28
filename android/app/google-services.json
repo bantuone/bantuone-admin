@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "796962857071",
+    "firebase_url": "https://bantuone-sunib-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bantuone-sunib",
+    "storage_bucket": "bantuone-sunib.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796962857071:android:b86df1d9c6a4ab63c32d9a",
+        "android_client_info": {
+          "package_name": "com.example.bantuone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796962857071-36k5bkefvka5c903k7pvpik2c300nphm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bantuone",
+            "certificate_hash": "cee38c6d80a2013d82407fbbbf0f0d0ce8840744"
+          }
+        },
+        {
+          "client_id": "796962857071-en1ga05pon177ubagl5ur1itibb659ho.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bantuone",
+            "certificate_hash": "a17a48df183ab29aa4c076cd552137a0bc1e2a56"
+          }
+        },
+        {
+          "client_id": "796962857071-3m0gbm98ulo56oed4mrd6p4a77fdl1cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxnr6ZAu7DgRpHZ4QcJvmqy7lu7jgAFyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796962857071-3m0gbm98ulo56oed4mrd6p4a77fdl1cl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "796962857071-n6a4cn0vqv4oqbjghakifqea20g3dbda.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bantuone"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796962857071:android:0dee180b5fa16a63c32d9a",
+        "android_client_info": {
+          "package_name": "com.example.bantuone_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796962857071-3m0gbm98ulo56oed4mrd6p4a77fdl1cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxnr6ZAu7DgRpHZ4QcJvmqy7lu7jgAFyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796962857071-3m0gbm98ulo56oed4mrd6p4a77fdl1cl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "796962857071-n6a4cn0vqv4oqbjghakifqea20g3dbda.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bantuone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
