@@ -6,6 +6,7 @@ class ServiceAddController extends GetxController {
   final nameCtr = TextEditingController();
   final addressCtr = TextEditingController();
   final latLngCtr = TextEditingController();
+  final phoneCtr = TextEditingController();
 
   final isLoading = false.obs;
 
@@ -23,6 +24,7 @@ class ServiceAddController extends GetxController {
         'name': nameCtr.text,
         'address': addressCtr.text,
         'lat/lng': latLngCtr.text,
+        'phone': phoneCtr.text,
         'type': selectedType.value
       }).then((value) {
         Get.back();

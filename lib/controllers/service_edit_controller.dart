@@ -6,6 +6,7 @@ class ServiceEditController extends GetxController {
   final nameCtr = TextEditingController();
   final addressCtr = TextEditingController();
   final latLngCtr = TextEditingController();
+  final phoneCtr = TextEditingController();
 
   final isLoading = false.obs;
 
@@ -16,6 +17,7 @@ class ServiceEditController extends GetxController {
     nameCtr.text = data['name'];
     addressCtr.text = data['address'];
     latLngCtr.text = data['lat/lng'];
+    phoneCtr.text = data['phone'] ?? '-';
     selectedType(data['type']);
   }
 
@@ -30,10 +32,11 @@ class ServiceEditController extends GetxController {
         'name': nameCtr.text,
         'address': addressCtr.text,
         'lat/lng': latLngCtr.text,
+        'phone': phoneCtr.text,
         'type': selectedType.value
       }).then((value) {
         Get.back();
-        Get.snackbar('Sukses!', 'Service added!');
+        Get.snackbar('Sukses!', 'Service updated!');
       }).catchError((e) {
         isLoading(false);
 

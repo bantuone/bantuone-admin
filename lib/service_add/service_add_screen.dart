@@ -39,6 +39,17 @@ class ServiceAddScreen extends GetView<ServiceAddController> {
             ),
           ),
           Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+            child: TextFormField(
+              controller: controller.phoneCtr,
+              decoration: const InputDecoration(
+                label: Text('Phone Number'),
+                hintText: '8xxxxxxxxxxx',
+                prefix: Text('+62'),
+              ),
+            ),
+          ),
+          Padding(
             padding: const EdgeInsets.only(left: 16, top: 16),
             child: Obx(
               () => DropdownButton(

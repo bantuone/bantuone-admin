@@ -1,3 +1,5 @@
+import 'package:bantuone_admin/home/home_binding.dart';
+import 'package:bantuone_admin/home/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:get/get.dart';
@@ -64,17 +66,17 @@ class OrderController extends GetxController {
 
   String getStepMsg() {
     final step = detail['step'] - 1;
-    return steps[step];
+    return steps[step > -1 ? step : 0];
   }
 
   String getImage() {
     final step = detail['step'] - 1;
-    return stepImages[step];
+    return stepImages[step > -1 ? step : 0];
   }
 
   String getNextStep() {
     final step = detail['step'] - 1;
-    return nextStep[step];
+    return nextStep[step > -1 ? step : 0];
   }
 
   _parseLocation(double lat, double lng) async {
@@ -89,9 +91,16 @@ class OrderController extends GetxController {
     firestore
         .collection('orders')
         .doc(detail['id'])
-        .update({'step': -1}).catchError((e) {
-      Get.snackbar('Error', e.message.toString());
-    });
+        .update({'step': -1})
+        .then(
+          (value) => Get.offAll(
+            () => const HomeScreen(),
+            binding: HomeBinding()
+          ),
+        )
+        .catchError((e) {
+          Get.snackbar('Error', e.message.toString());
+        });
   }
 
   updateStep() {

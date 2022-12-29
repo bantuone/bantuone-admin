@@ -215,7 +215,7 @@ class OrderScreen extends GetView<OrderController> {
                 ),
                 Expanded(
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () => controller.cancelOrder(),
                     child: const Text('Ya'),
                   ),
                 ),

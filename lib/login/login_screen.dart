@@ -39,6 +39,7 @@ final controller = LoginController();
                 TextFormField(
                   focusNode: controller.passwordNode,
                   controller: controller.passwordCtr,
+                  obscureText: true,
                   decoration: const InputDecoration(hintText: 'Password'),
                 ),
                 Container(

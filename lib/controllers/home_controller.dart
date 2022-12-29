@@ -91,6 +91,7 @@ class HomeController extends GetxController
   @override
   void onInit() {
     tabController = TabController(length: 3, vsync: this);
+    getOrders();
     super.onInit();
   }
 }

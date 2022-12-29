@@ -61,6 +61,17 @@ class ServiceEditScreen extends GetView<ServiceEditController> {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+            child: TextFormField(
+              controller: controller.phoneCtr,
+              decoration: const InputDecoration(
+                label: Text('Phone Number'),
+                hintText: '8xxxxxxxxxxx',
+                prefix: Text('+62'),
+              ),
+            ),
+          ),
           const SizedBox(
             height: 32,
           ),
@@ -77,7 +88,7 @@ class ServiceEditScreen extends GetView<ServiceEditController> {
                           color: Colors.white,
                         ),
                       )
-                    : const Text('Add'),
+                    : const Text('Edit'),
               ),
             ),
           )
