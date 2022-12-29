@@ -3,6 +3,7 @@ import 'package:bantuone_admin/home/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class OrderController extends GetxController {
   final detail = <String, dynamic>{}.obs;
@@ -93,10 +94,8 @@ class OrderController extends GetxController {
         .doc(detail['id'])
         .update({'step': -1})
         .then(
-          (value) => Get.offAll(
-            () => const HomeScreen(),
-            binding: HomeBinding()
-          ),
+          (value) =>
+              Get.offAll(() => const HomeScreen(), binding: HomeBinding()),
         )
         .catchError((e) {
           Get.snackbar('Error', e.message.toString());
@@ -111,5 +110,14 @@ class OrderController extends GetxController {
         .update({'step': detail['step'] + 1}).catchError((e) {
       Get.snackbar('Error', e.message.toString());
     });
+  }
+
+  callUser() {
+    if (detail['userPhone'].toString().isNotEmpty) {
+      final uri = Uri.parse('tel:+62 ${detail['userPhone']}');
+      launchUrl(uri);
+    } else {
+      Get.snackbar('Error', 'Phone number not found!');
+    }
   }
 }

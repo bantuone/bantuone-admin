@@ -90,7 +90,7 @@ class OrderScreen extends GetView<OrderController> {
                     ),
                     const SizedBox(height: 16),
                     Container(
-                      padding: const EdgeInsets.all(12),
+                      padding: const EdgeInsets.only(left: 12),
                       decoration: BoxDecoration(
                         color: Colors.grey.shade300,
                         borderRadius: BorderRadius.circular(8),
@@ -104,7 +104,10 @@ class OrderScreen extends GetView<OrderController> {
                             color: Colors.black,
                           ),
                           const SizedBox(width: 16),
-                          const Icon(Icons.call_outlined)
+                          IconButton(
+                            onPressed: () => controller.callUser(),
+                            icon: const Icon(Icons.call_outlined),
+                          )
                         ],
                       ),
                     ),
