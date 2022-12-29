@@ -1,3 +1,4 @@
+import 'package:bantuone_admin/constants/colors.dart';
 import 'package:bantuone_admin/controllers/home_controller.dart';
 import 'package:bantuone_admin/service_add/service_add_binding.dart';
 import 'package:bantuone_admin/service_edit/service_edit_screen.dart';
@@ -31,11 +32,11 @@ class ServicesWidget extends GetView<HomeController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Name: ${data['name']}'),
+            Text('${data['name']}', style: TextStyle(fontWeight: FontWeight.bold, color: darkBlue, fontSize: 15),),
             const SizedBox(height: 8),
-            Text('Address: ${data['address']}'),
+            Text('${data['address']}', style: TextStyle(color: midBlue),),
             const SizedBox(height: 8),
-            Text('Type: ${data['type']}'),
+            Text('${data['type']}', style: TextStyle(fontWeight: FontWeight.bold, color: green),),
             const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -43,7 +44,7 @@ class ServicesWidget extends GetView<HomeController> {
                 TextButton(
                   onPressed: () => controller.deleteData(data['id']),
                   child: const Text(
-                    'Delete',
+                    'Hapus',
                     style: TextStyle(color: Colors.red),
                   ),
                 ),
@@ -53,7 +54,7 @@ class ServicesWidget extends GetView<HomeController> {
                     arguments: data,
                     binding: ServiceEditBinding(),
                   ),
-                  child: const Text('Update'),
+                  child: const Text('Edit'),
                 ),
               ],
             )

@@ -15,7 +15,7 @@ class HomeScreen extends GetView<HomeController> {
       () => Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xff14274E),
-          title: const Text('Hai Admin!'),
+          title: const Text('Hai Admin!', style: TextStyle(fontWeight: FontWeight.bold),),
           bottom: controller.currentIndex.value == 0
               ? TabBar(
                   controller: controller.tabController,

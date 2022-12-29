@@ -1,3 +1,4 @@
+import 'package:bantuone_admin/constants/colors.dart';
 import 'package:bantuone_admin/controllers/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -34,7 +35,7 @@ class OrdersWidget extends GetView<HomeController> {
                             title: Row(
                               children: [
                                 Text(
-                                    'Destination: ${history['destinationName']}')
+                                    '${history['destinationName']}',style: TextStyle(fontWeight: FontWeight.bold, color: darkBlue),)
                               ],
                             ),
                             subtitle: Text('${history['destinationAddress']}'),
@@ -58,6 +59,10 @@ class OrdersWidget extends GetView<HomeController> {
                                   ElevatedButton(
                                     onPressed: () => controller.updateStep(
                                         history['id'], history['step'] + 1),
+                                        style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all(Colors.green),
+                                    ),
                                     child: const Text('Terima'),
                                   ),
                                 ],

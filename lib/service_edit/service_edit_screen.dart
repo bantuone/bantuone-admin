@@ -1,3 +1,4 @@
+import 'package:bantuone_admin/constants/colors.dart';
 import 'package:bantuone_admin/controllers/service_add_controller.dart';
 import 'package:bantuone_admin/widgets/appbar.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class ServiceEditScreen extends GetView<ServiceEditController> {
     controller.initData(data);
     
     return Scaffold(
-      appBar: CustomAppBar.standardAppbar('Edit Service'),
+      appBar: CustomAppBar.standardAppbar('Edit Bantuan'),
       body: ListView(
         children: [
           Padding(
@@ -23,7 +24,7 @@ class ServiceEditScreen extends GetView<ServiceEditController> {
             child: TextFormField(
               controller: controller.nameCtr,
               decoration: const InputDecoration(
-                label: Text('Name'),
+                label: Text('Nama'),
               ),
             ),
           ),
@@ -32,7 +33,7 @@ class ServiceEditScreen extends GetView<ServiceEditController> {
             child: TextFormField(
               controller: controller.addressCtr,
               decoration: const InputDecoration(
-                label: Text('Address'),
+                label: Text('Alamat'),
               ),
             ),
           ),
@@ -66,7 +67,7 @@ class ServiceEditScreen extends GetView<ServiceEditController> {
             child: TextFormField(
               controller: controller.phoneCtr,
               decoration: const InputDecoration(
-                label: Text('Phone Number'),
+                label: Text('Nomor Telepon'),
                 hintText: '8xxxxxxxxxxx',
                 prefix: Text('+62'),
               ),
@@ -79,6 +80,9 @@ class ServiceEditScreen extends GetView<ServiceEditController> {
             () => SizedBox(
               width: double.infinity,
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: green
+                ),
                 onPressed: () => controller.isLoading.value
                     ? null
                     : controller.editService(data['id']),
@@ -88,7 +92,7 @@ class ServiceEditScreen extends GetView<ServiceEditController> {
                           color: Colors.white,
                         ),
                       )
-                    : const Text('Edit'),
+                    : const Text('Selesai'),
               ),
             ),
           )

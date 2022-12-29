@@ -40,7 +40,7 @@ class OrderController extends GetxController {
 
       if (data!['step'] == -1) {
         Get.back();
-        Get.snackbar('Alert', 'Order canceled!');
+        Get.snackbar('PERHATIAN', 'Order di batalkan!');
       }
 
       data['id'] = value.id;

@@ -1,3 +1,4 @@
+import 'package:bantuone_admin/constants/colors.dart';
 import 'package:bantuone_admin/controllers/service_add_controller.dart';
 import 'package:bantuone_admin/widgets/appbar.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ class ServiceAddScreen extends GetView<ServiceAddController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar.standardAppbar('Add Service'),
+      appBar: CustomAppBar.standardAppbar('Tambah Bantuan'),
       body: ListView(
         children: [
           Padding(
@@ -17,7 +18,7 @@ class ServiceAddScreen extends GetView<ServiceAddController> {
             child: TextFormField(
               controller: controller.nameCtr,
               decoration: const InputDecoration(
-                label: Text('Name'),
+                label: Text('Nama Bantuan'),
               ),
             ),
           ),
@@ -26,7 +27,7 @@ class ServiceAddScreen extends GetView<ServiceAddController> {
             child: TextFormField(
               controller: controller.addressCtr,
               decoration: const InputDecoration(
-                label: Text('Address'),
+                label: Text('Alamat'),
               ),
             ),
           ),
@@ -43,7 +44,7 @@ class ServiceAddScreen extends GetView<ServiceAddController> {
             child: TextFormField(
               controller: controller.phoneCtr,
               decoration: const InputDecoration(
-                label: Text('Phone Number'),
+                label: Text('Nomor Telepon'),
                 hintText: '8xxxxxxxxxxx',
                 prefix: Text('+62'),
               ),
@@ -73,6 +74,9 @@ class ServiceAddScreen extends GetView<ServiceAddController> {
             () => SizedBox(
               width: double.infinity,
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: green
+                ),
                 onPressed: () =>
                     controller.isLoading.value ? null : controller.addService(),
                 child: controller.isLoading.value
@@ -81,7 +85,7 @@ class ServiceAddScreen extends GetView<ServiceAddController> {
                           color: Colors.white,
                         ),
                       )
-                    : const Text('Add'),
+                    : const Text('Selesai'),
               ),
             ),
           )

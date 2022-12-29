@@ -1,3 +1,4 @@
+import 'package:bantuone_admin/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -97,7 +98,7 @@ class OrderScreen extends GetView<OrderController> {
                       ),
                       child: Row(
                         children: [
-                          const Expanded(child: Text('Menuju titik jemput')),
+                          const Expanded(child: Text('Hubungi pengguna sekarang')),
                           Container(
                             width: 1,
                             height: 24,
@@ -206,20 +207,21 @@ class OrderScreen extends GetView<OrderController> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('Batalkan Pesanaan?'),
+            const Text('Batalkan Pesanan?', style: TextStyle(color: darkBlue, fontSize: 20, fontWeight: FontWeight.bold),),
             const SizedBox(height: 16),
             Row(
               children: [
                 Expanded(
                   child: TextButton(
                     onPressed: () => Get.back(),
-                    child: const Text('Tidak'),
+                    child: const Text('TIDAK', style: TextStyle(color: darkBlue, fontSize: 15, fontWeight: FontWeight.bold),),
                   ),
                 ),
                 Expanded(
                   child: TextButton(
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(darkBlue)),
                     onPressed: () => controller.cancelOrder(),
-                    child: const Text('Ya'),
+                    child: const Text('YA', style: TextStyle(color: white, fontSize: 15, fontWeight: FontWeight.bold),),
                   ),
                 ),
               ],
