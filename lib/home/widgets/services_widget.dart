@@ -54,7 +54,7 @@ class ServicesWidget extends GetView<HomeController> {
                     arguments: data,
                     binding: ServiceEditBinding(),
                   ),
-                  child: const Text('Edit'),
+                  child: const Text('Ubah'),
                 ),
               ],
             )

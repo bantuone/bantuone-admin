@@ -21,13 +21,13 @@ class HomeScreen extends GetView<HomeController> {
                   controller: controller.tabController,
                   tabs: const [
                     Tab(
-                      child: Text('Received'),
+                      child: Text('Diterima'),
                     ),
                     Tab(
-                      child: Text('On going'),
+                      child: Text('Berlangsung'),
                     ),
                     Tab(
-                      child: Text('Finished'),
+                      child: Text('Selesai'),
                     ),
                   ],
                   onTap: (value) => controller.getOrders(),
@@ -59,9 +59,9 @@ class HomeScreen extends GetView<HomeController> {
           onTap: (value) => controller.currentIndex(value),
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(Icons.document_scanner_sharp), label: 'Orders'),
+                icon: Icon(Icons.document_scanner_sharp), label: 'Pesanan'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.apartment_outlined), label: 'Services'),
+                icon: Icon(Icons.apartment_outlined), label: 'Bantuan'),
           ]),
     );
   }

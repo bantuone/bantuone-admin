@@ -34,13 +34,13 @@ final controller = LoginController();
                 TextFormField(
                   focusNode: controller.usernameNode,
                   controller: controller.usernameCtr,
-                  decoration: const InputDecoration(hintText: 'Username'),
+                  decoration: const InputDecoration(hintText: 'Nama Pengguna'),
                 ),
                 TextFormField(
                   focusNode: controller.passwordNode,
                   controller: controller.passwordCtr,
                   obscureText: true,
-                  decoration: const InputDecoration(hintText: 'Password'),
+                  decoration: const InputDecoration(hintText: 'Kata Sandi'),
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 24),

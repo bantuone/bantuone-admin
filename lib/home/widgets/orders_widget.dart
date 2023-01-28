@@ -76,7 +76,7 @@ class OrdersWidget extends GetView<HomeController> {
                 },
               )
             : const Center(
-                child: Text('Belum ada order masuk'),
+                child: Text('Belum ada pesanan masuk'),
               ),
       ),
     );
