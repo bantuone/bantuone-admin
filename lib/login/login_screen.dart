@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                 height: 20,
               ),
               TextFormField(
-                style: TextStyle(color: Colors.white),
+                //style: TextStyle(color: Colors.white),
                 focusNode: controller.usernameNode,
                 controller: controller.usernameCtr,
                 decoration: InputDecoration(
@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                 height: 24,
               ),
               TextFormField(
-                style: TextStyle(color: Colors.white),
+                //style: TextStyle(color: Colors.white),
                 focusNode: controller.passwordNode,
                 controller: controller.passwordCtr,
                 obscureText: true,
